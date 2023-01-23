@@ -1,6 +1,28 @@
 # Taxi-V3_SARSA
 Reinforcement Learning Taxi V3 using SARSA
 
+SARSA algorithm is a slight variation of the popular Q-Learning algorithm. For a learning agent in any Reinforcement Learning algorithm it’s policy can be of two types:
+On Policy: the learning agent learns the value function according to the current action derived from the policy currently being used. 
+Off Policy: the learning agent learns the value function according to the action derived from another policy. 
+Q-Learning technique is an Off Policy technique and uses the greedy approach to learn the Q-value. SARSA technique, on the other hand, is an On Policy and uses the action performed by the current policy to learn the Q-value.
+The equation for SARSA depends on the current state, current action, reward obtained, next state and next action. SARSA stands for State Action Reward State Action which symbolizes the tuple (s, a, r, s’, a’).
+
+
+The equation for SARSA depends on the current state, current action, reward obtained, next state and next action.
+
+    Q(s_t,a_t) = Q(s_t,a_t) + alpha* ( r_(t+1) + gamma* Q(s_(t+1),a_(t+1)) - Q(s_t,a_t) )
+
+
+Where:
+
+- ϵ (epsilon) is the paramenter which choose between exploration (choosing a random action) and exploitation (choosing actions based on already learned Q-values). 
+
+- α (alpha) is the learning rate, it is the extent to which our Q-values are being updated in every iteration.
+
+- γ (gamma) is the discount factor  determines how much importance we want to give to future rewards. A high value for the discount factor (close to 1) captures the long-term effective award, insted a discount factor of 0 makes our agent consider only immediate reward (greedy).
+
+
+
 # Result
 The program should run for hundreds/thousands of episodes (many hours) to learn and have good result, so I will attach some results.
 
