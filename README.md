@@ -2,8 +2,11 @@
 Reinforcement Learning Taxi V3 using SARSA
 
 SARSA algorithm is a slight variation of the popular Q-Learning algorithm. For a learning agent in any Reinforcement Learning algorithm it’s policy can be of two types:
-On Policy: the learning agent learns the value function according to the current action derived from the policy currently being used. 
-Off Policy: the learning agent learns the value function according to the action derived from another policy. 
+
+- On Policy: the learning agent learns the value function according to the current action derived from the policy currently being used. 
+- Off Policy: the learning agent learns the value function according to the action derived from another policy. 
+
+
 Q-Learning technique is an Off Policy technique and uses the greedy approach to learn the Q-value. SARSA technique, on the other hand, is an On Policy and uses the action performed by the current policy to learn the Q-value.
 The equation for SARSA depends on the current state, current action, reward obtained, next state and next action. SARSA stands for State Action Reward State Action which symbolizes the tuple (s, a, r, s’, a’).
 
